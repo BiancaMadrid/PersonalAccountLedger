@@ -48,16 +48,19 @@ public class Main {
         //User's choice
         System.out.println("Please Select One of the Following Options using the PinPad (1-4): ");
         choice = reader.nextInt();
+            Transaction debitInfo = new Transaction();
 
 
             switch (choice) {
                 case 1:
                     System.out.println("Deposit Screen:\n ");
                     System.out.println("Input Deposit Information:\n ");
+                    Transaction Transactions = new Transaction();
+
                     break;
                 case 2:
                     System.out.println("Payment Screen: ");
-                    System.out.println("Input Debit Card Information: \n");
+                    System.out.println("Input Debit Card Information: \n" );
                     break;
                 case 3:
                     System.out.println("Ledger Screen:\n Choose One of the Following Options: ");
