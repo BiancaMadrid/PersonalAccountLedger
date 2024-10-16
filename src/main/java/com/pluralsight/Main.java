@@ -3,6 +3,8 @@ import java.io.FileWriter;
 import java.io.BufferedWriter;
 import java.io.IOException;
 import java.util.Scanner;
+import java.time.LocalDate;
+import java.time.LocalTime;
 public class Main {
     static Scanner reader = new Scanner(System.in);
 
@@ -50,10 +52,12 @@ public class Main {
 
             switch (choice) {
                 case 1:
-                    System.out.println("Deposit Screen: ");
+                    System.out.println("Deposit Screen:\n ");
+                    System.out.println("Input Deposit Information:\n ");
                     break;
                 case 2:
                     System.out.println("Payment Screen: ");
+                    System.out.println("Input Debit Card Information: \n");
                     break;
                 case 3:
                     System.out.println("Ledger Screen:\n Choose One of the Following Options: ");
