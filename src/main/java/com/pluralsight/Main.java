@@ -7,70 +7,91 @@ public class Main {
     static Scanner reader = new Scanner(System.in);
 
     public static void main(String[] args) {
-
-        //Displaying HomeScreen
+        //Display HomeScreen
         //Create Loop for Home Screen Options
         //Watch video for switch case instead of if and else statement.
         //Add Error Message if Wrong Input is Added! look at demos from Thursday's and Friday's class
-        String display;
-        boolean running = true;
-        int choice;
-        while (running) {
-            System.out.println("Welcome to Home Screen");
-            System.out.println("1. Add Deposit: \n");
-            System.out.println("2. Make Payment (DEBIT ONLY): \n");
-            System.out.println("3. Ledger: \n");
-            System.out.println("4. Exit: \n");
 
-            //User's choice
-            System.out.println("Please Select One of the Following Options using the PinPad (1-4): ");
-            choice = reader.nextInt();
+        int choice;
+        //HOME SCREEN Display
+
+        while(true) {
+        System.out.println("Welcome to Home Screen");
+        System.out.println("1. Add Deposit: \n");
+        System.out.println("2. Make Payment (DEBIT ONLY): \n");
+        System.out.println("3. Ledger: \n");
+        System.out.println("4. Exit: \n");
+
+        //User's choice
+        System.out.println("Please Select One of the Following Options using the PinPad (1-4): ");
+        choice = reader.nextInt();
+
 
             switch (choice) {
                 case 1:
-                    addDepositPage();
+                    System.out.println("Deposit Screen: ");
                     break;
                 case 2:
-                    makePaymentPage();
+                    System.out.println("Payment Screen: ");
                     break;
                 case 3:
-                    ledgerPage();
+                    System.out.println("Ledger Screen:\n Choose One of the Following Options: ");
                     break;
                 case 4:
-                    exitPage();
+                    System.out.println("Exit Screen: RETURN TO HOME SCREEN");
                     break;
                 default:
-                    System.out.println("Please select new Option: ");
-
+                    System.out.println("ERROR. GoodBye. ");
+                    System.exit(0);
+                    reader.close();//closing scanner
             }
-            //Output
-            System.out.println("Deposit Screen: ");
-            System.out.println("Payment Screen: ");
-            System.out.println("Ledger Screen:\n Choose One of the Following Options: ");
-            System.out.println("Exit Screen: RETURN TO HOME SCREEN");
+
+            System.out.println("Press Enter to Return to Home Screen: ");
+            reader.nextLine();
+            reader.nextLine();
+
         }
-        reader.close();
     }
+
 }
 
 
-       //Defining the switch variables with Methods
-        public static void addDepositPage(){
-            System.out.println("Deposit Screen: " );
+
+
+
+
+
+//Displaying Ledger Object
+// Ledger myLedger = new Ledger();
+
+
+
+
+
+
+
+
+
+
+
+        /*try {
+            BufferedWriter writer = new BufferedWriter(new FileWriter("transactions.csv"));
+            writer.write("2022-03-15||08:45:00||Coffee||Starbucks||$3.95,\n" +
+                    "2022-05-21||13:00:45||Lunch||Chipotle||$10.50,\n" +
+                    "2023-07-30||17:30:36||Gas||Chevron||$42.80,\n" +
+                    "2023-11-12||19:20:22||Groceries||Target||$93.50,\n" +
+                    "2024-01-18||09:10:01||Gym Membership||Planet Fitness||$25.00,\n" +
+                    "2024-04-22||20:45:31||Dinner||Olive Garden||$32.75,\n" +
+                    "2024-06-05||10:00:25||Online Subscription||Spotify||$9.99,\n" +
+                    "2024-09-28||16:15:06||Shoes||Nike Store||$79.99,\n" +
+                    "2024-10-14||11:50:19||Taxi Ride||Lyft||$18.65,\n" +
+                    "2024-10-16||07:20:35||Breakfast||IHOP||$14.30");
+            writer.close();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+
         }
-        public static void makePaymentPage() {
-            System.out.println("Payment Screen: " );
-        }
-        public static void ledgerPage(){
-            System.out.println("Ledger Screen:\n Choose One of the Following Options: ");
-        }
-        public static void exitPage(){
-            System.out.println("Exit Screen: RETURN TO HOME SCREEN");
-        }
 
-
-
-        //Displaying Ledger Object
-       // Ledger myLedger = new Ledger();
-
-
+    }
+}
+*/
