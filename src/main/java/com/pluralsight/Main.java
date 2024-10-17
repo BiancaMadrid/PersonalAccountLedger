@@ -9,6 +9,9 @@ public class Main {
     static Scanner reader = new Scanner(System.in);
 
     public static void main(String[] args) {
+
+        //Create file w/o scanner
+        //Get a refresher on time and date
         try {
             BufferedWriter writer = new BufferedWriter(new FileWriter("transactions.csv"));
             writer.write("2022-03-15||08:45:00||Coffee||Starbucks||$3.95,\n" +
@@ -48,14 +51,16 @@ public class Main {
         //User's choice
         System.out.println("Please Select One of the Following Options using the PinPad (1-4): ");
         choice = reader.nextInt();
-            Transaction debitInfo = new Transaction();
+
+            //Object For Homescreen Data
+            Transaction d1 = new Transaction();
 
 
             switch (choice) {
                 case 1:
                     System.out.println("Deposit Screen:\n ");
                     System.out.println("Input Deposit Information:\n ");
-                    Transaction Transactions = new Transaction();
+                    Transaction d1 = new Transaction();
 
                     break;
                 case 2:
