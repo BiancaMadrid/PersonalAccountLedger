@@ -21,7 +21,6 @@ public class Transaction {
         System.out.println("Account Found. \n" + "Enter Amount wished for Deposit:\n ");
         this.amountDeposited = reader.nextInt();
     }
-}
 
     //DEBIT INFORMATION:
     //Attributes
@@ -31,15 +30,18 @@ public class Transaction {
     float cvv;
 
     //Parameterless Constructor
-    public Transaction(){
+    public void Transaction() {
         System.out.println("Enter Debit Card Information:\n " + "What is the Card Holder's Full Name?\n ");
-        this.cardHolderNamer = reader.nextInt();
-        System.out.println("Enter the 12 digit Card Number:\n ");\
-        
-
-
+        this.cardHolderNamer = reader.next();
+        System.out.println("Enter the 12 digit Card Number:\n ");
+        this.cardNumber = reader.nextFloat();
+        System.out.println("Enter Expiration Date: ");
+        this.expirationDate = reader.next();
+        System.out.println("Enter the CVV Security Code: \n");
+        this.cvv = reader.nextFloat();
 
     }
+}
 
 
 

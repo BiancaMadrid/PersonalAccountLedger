@@ -60,12 +60,12 @@ public class Main {
                 case 1:
                     System.out.println("Deposit Screen:\n ");
                     System.out.println("Input Deposit Information:\n ");
-                    Transaction d1 = new Transaction();
-
+                    d1 = new Transaction();
                     break;
                 case 2:
                     System.out.println("Payment Screen: ");
                     System.out.println("Input Debit Card Information: \n" );
+                    
                     break;
                 case 3:
                     System.out.println("Ledger Screen:\n Choose One of the Following Options: ");
