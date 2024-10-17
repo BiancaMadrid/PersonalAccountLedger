@@ -64,4 +64,15 @@ public class Transactions {
     public void setAmount(double amount) {
         this.amount = amount;
     }
+    //Functionality(Remove other class/ integrate it. delete bank info)
+    public static void addDeposit() {
+        //Prompting user for deposit info
+        System.out.println("Enter Description:\n ");
+
+        System.out.println("Enter Vendor:\n ");
+
+        System.out.println("Enter Amount wished for Deposit:\n ");
+
+    }
+
 }
